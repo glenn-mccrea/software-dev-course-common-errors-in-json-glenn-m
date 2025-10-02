@@ -15,7 +15,6 @@ This activity helps practice spotting and fixing common JSON mistakes such as:
 - Invalid data types
 */
 
-
 // ============================================
 // 🧭 Instructions:
 // ============================================
@@ -39,7 +38,6 @@ but it contains multiple syntax errors that prevent it from being parsed.
 - A list of the corrections made and why each was necessary
 */
 
-
 // ============================================
 // 🔍 Provided JSON File with Errors
 // ============================================
@@ -47,17 +45,17 @@ but it contains multiple syntax errors that prevent it from being parsed.
 const invalidBookingJSON = `
 {
   "hotelName": "Grand City Hotel",
-  "checkInDate": "2024-05-15"
+  "checkInDate": "2024-05-15", //Missing Comma -- added comma
   "checkOutDate": "2024-05-20",
   "guests": [
     {
-      name: "Alice Johnson",
+      "name": "Alice Johnson", // Key missing "" -- added missing ""
       "age": 30,
       "email": "alice.johnson@example.com"
     },
     {
       "name": "Bob Smith",
-      "age": undefined,
+      "age": undefined, // Missing Value -- added number value
       "email": "bob.smith@example"
     }
   ],
@@ -68,7 +66,6 @@ const invalidBookingJSON = `
   }
 }
 `;
-
 
 // ============================================
 // ✅ Requirements
@@ -82,7 +79,6 @@ const invalidBookingJSON = `
   • What did you change to fix it?
 */
 
-
 // ============================================
 // 🤔 Follow-Up Questions
 // ============================================
@@ -92,10 +88,21 @@ const invalidBookingJSON = `
 
 1️⃣ What tools or techniques did you use to identify the errors?
 
+***Built in VS Code linting with prettier
+***Visual inspection. I just looked.
+
 2️⃣ How did you confirm that your corrected JSON file was valid?
+
+*** I checked it in vscode with Prettier
+*** I checked it with https://codebeautify.org/jsonvalidator
+
 
 3️⃣ Which errors were the most difficult to spot? Why?
 
+***Commas and brackets Somtimes it gets tricky to see if the brackets are paired correctly.
+
 4️⃣ What strategies can help you avoid these kinds of errors in the future?
    (e.g., syntax highlighting, linters, writing JSON by example)
+
+   Linting is extremely helpful. Also just the way that VSCode changes the colors depending on what type it is also helps a lot.
 */
